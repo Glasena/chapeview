@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mssql": "^7.3.5",
+    "mysql": "^2.14.1",
+    "pg": "^8.10.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.12"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.14",
+    "ts-node": "^10.7.0",
+    "typescript": "4.5.2"
+  },
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "typeorm": "typeorm-ts-node-commonjs ",
+    "migrations-generate": "npm run typeorm migration:generate -- src/database/migrations/Users -d src/database/data-source.ts",
+    "migrations-run": "npm run typeorm migration:run -- -d src/database/data-source.ts"
+  }
+}
